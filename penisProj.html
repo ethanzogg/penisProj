@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html style="background-color:rgb(60, 179, 113);">
+<style type="text/css">
+	.button {
+		display: inline-block;
+		border: none;
+		background-color: rgb(255, 102, 102);
+		text-align: center;
+		padding: 10px;
+		transition: all 0.3s;
+		cursor: pointer;
+	}
+	.button span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: 0s
+	}
+	.button span:after {
+		content: "Bro, you being honest?";
+		position: absolute;
+		opacity: 0;
+		bottom: -5px;
+		transition: 0s
+	}
+	.button:hover span {
+		padding-bottom: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.button:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+</style>
+	<body style="text-align: center;">
+		<h1 style="font-family: arial">PENIS CALCULATOR</h1>
+		<lable for="inputs">
+			<h3 style="font-family: arial">Select Two Input Option</h3>
+			<select> id="inputs1">
+				<label><p style="font-family: arial">Options</p></label>
+				<option>Select One</option>
+				<option value="length">Length</option>
+				<option value="girth">Circunference </option>
+				<option value="weight">Weight</option>
+			</select></lable><br>
+			<p style="font-family: arial"></p>
+			<input type="test" name="firstInput" style="font-family: arial"></input>
+			<script type="text/javascript">
+				const select = document.querySelector('select');
+				const p = document.querySelector('p');
+				select.addEventListener('change', inputSelect);
+				function inputSelect(){
+					const c = select.value;
+					if (c == "length"){
+						p.textContent = "Length:";
+					} else if (c == "girth"){
+						p.textContent = "Circunference:";
+					} else if (c == "weight"){
+						p.textContent = "Weight:";
+					}
+				}
+			</script>
+			<br><br>
+			<select>id="inputs2">
+				<label><p style="font-family: arial">Options</p></label>
+				<option>Select One</option>
+				<option value="length">Length</option>
+				<option value="girth">Circunference </option>
+				<option value="weight">Weight</option>
+			</select><br>
+			<p id="p1" style="font-family: arial"></p>
+			<input type="test" name="firstInput" style="font-family: arial"></input>
+			<script type="text/javascript">
+				const select = document.querySelector('select');
+				const p1 = document.querySelector('p1');
+				select.addEventListener('change', inputSelect);
+				function inputSelect(){
+					const c = select.value;
+					if (c == "length"){
+						p1.textContent = "Length:";
+					} else if (c == "girth"){
+						p1.textContent = "Circunference:";
+					} else if (c == "weight"){
+						p1.textContent = "Weight:";
+					}
+				}
+			</script>
+			<br><br>
+			<!--<form><br>
+				<input type="int" name="in1"><br><br>
+				<input type="int" name="in2"><br><br>
+			</form>-->
+			<script type="text/javascript">
+				function enterFunc(){
+					document.getElementById("inputs1").innerHTML = "Button Clicked";
+				}
+			</script>
+			<button class="button"><span>ENTER</span></button>
+	</body>
+</html>
